@@ -20,7 +20,7 @@ class RemarkCommandTest {
 
     @Test
     void execute_addRemarkUnfilteredList_success() {
-        Person originalPerson = new PersonBuilder().build();
+        Person originalPerson = model.getFilteredPersonList().get(INDEX_FIRST_PERSON.getZeroBased());
         Person editedPerson = new PersonBuilder(originalPerson).withRemark("Remark made.").build();
         Remark remark = new Remark(editedPerson.getRemark().value);
 

@@ -40,7 +40,11 @@ class JsonAdaptedPerson {
         this.name = name;
         this.phone = phone;
         this.email = email;
-        this.remark = remark;
+        if (remark != null) {
+            this.remark = remark;
+        } else {
+            this.remark = "";
+        }
         if (tagged != null) {
             this.tagged.addAll(tagged);
         }
