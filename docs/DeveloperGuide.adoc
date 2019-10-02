@@ -279,13 +279,15 @@ Refer to the guide <<DevOps#, here>>.
 
 *Target user profile*:
 
-* has a need to manage a significant number of contacts
+* has a need to manage a significant number of tasks
+* needs reminders to take breaks or move on to cover all their work
+* prefers to be more organized with their time and tasks
 * prefer desktop apps over other types
 * can type fast
 * prefers typing over mouse input
 * is reasonably comfortable using CLI apps
 
-*Value proposition*: manage contacts faster than a typical mouse/GUI driven app
+*Value proposition*: manage time and tasks more efficiently than a typical mouse/GUI driven app
 
 [appendix]
 == User Stories
