@@ -36,18 +36,18 @@ public class LogicManager implements Logic {
 
     @Override
     public CommandResult execute(String commandText) throws CommandException, ParseException {
-        //Logging
         logger.info("----------------[USER COMMAND][" + commandText + "]");
 
         //Parse user input from String to a command
         CommandResult commandResult;
+        //Parse user input from String to a Command
         Command command = addressBookParser.parseCommand(commandText);
-        //Executes the Command and stores result
+
+        //Executes the Command and stores the result
         commandResult = command.execute(model);
 
         try {
-            //We can deduce that the previous line of code modifies model in some way
-            // since it's being stored here.
+            //Model is modified in some way above, then we store the modified version.
             storage.saveAddressBook(model.getAddressBook());
         } catch (IOException ioe) {
             throw new CommandException(FILE_OPS_ERROR_MESSAGE + ioe, ioe);
