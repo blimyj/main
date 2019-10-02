@@ -33,7 +33,6 @@ image::Ui.png[width="790"]
 e.g. typing *`help`* and pressing kbd:[Enter] will open the help window.
 .  Some example commands you can try:
 
-* *`list`* : lists all tasks
 * **`delete`**`3` : deletes the 3rd item shown in the current list
 * *`exit`* : exits the app
 
