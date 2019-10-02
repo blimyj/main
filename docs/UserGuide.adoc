@@ -109,8 +109,7 @@ Examples:
 
 === Editing an item : `edit`
 
-This command is used to edit any of the items that you might have. However, you are only able to edit the item when the list is currently in view. For example, you are able to edit a task when the current view is that of the task list as index is used to reference the item. However, you are not able to edit a task for the event list.
- +
+This command is used to edit any of the items that you might have. However, you are only able to edit the item when the list is currently in view. For example, you are able to edit a task when the current view is that of the task list as index is used to reference the item. However, you are not able to edit a task for the event list.+
 Format: `edit INDEX [-td DESCRIPTION] [-ed DESCRIPTION] [-rd DESCRIPTION] [-d DATETIME] [-r REMINDER] [-p PRIORITY] [-t TAG]...`
 
 ****
