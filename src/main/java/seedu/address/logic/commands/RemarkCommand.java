@@ -27,7 +27,7 @@ public class RemarkCommand extends Command {
             + "Existing remark will be overwritten by the input.\n"
             + "Parameters: INDEX (must be a positive integer) "
             + "r/ [REMARK]\n"
-            + "Example: " + COMMAND_WORD + " 1 "
+            + "Example: " + COMMAND_WORD + " 1"
             + "r/ Likes to swim.";
 
     public static final String MESSAGE_ARGUMENTS = "Index: %1$d, Remark: %2$s";
