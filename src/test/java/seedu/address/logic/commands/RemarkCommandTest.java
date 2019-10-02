@@ -1,6 +1,5 @@
 package seedu.address.logic.commands;
 
-import static org.junit.jupiter.api.Assertions.*;
 import static seedu.address.logic.commands.CommandTestUtil.assertCommandSuccess;
 import static seedu.address.testutil.TypicalIndexes.INDEX_FIRST_PERSON;
 import static seedu.address.testutil.TypicalPersons.getTypicalAddressBook;
@@ -31,5 +30,6 @@ class RemarkCommandTest {
         Model expectedModel = new ModelManager(new AddressBook(model.getAddressBook()), new UserPrefs());
         expectedModel.setPerson(originalPerson, editedPerson);
 
-        assertCommandSuccess(remarkCommand, model, expectedMessage, expectedModel);    }
+        assertCommandSuccess(remarkCommand, model, expectedMessage, expectedModel);
+    }
 }
