@@ -71,6 +71,18 @@ public class LogicManager implements Logic {
         return model.getVisualList();
     }
 
+    public VisualizeList getTaskList() {
+        return model.getTaskList();
+    }
+
+    public VisualizeList getEventList() {
+        return model.getEventList();
+    }
+
+    public VisualizeList getReminderList() {
+        return model.getReminderList();
+    }
+
     @Override
     public Path getAddressBookFilePath() {
         return model.getItemStorageFilePath();

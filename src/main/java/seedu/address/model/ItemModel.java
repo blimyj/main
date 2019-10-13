@@ -60,11 +60,15 @@ public interface ItemModel {
 
     public VisualizeList getVisualList();
 
+    public VisualizeList getTaskList();
+
+    public VisualizeList getEventList();
+
+    public VisualizeList getReminderList();
+
     public void setVisualList(String listString) throws IllegalValueException;
 
     public void clear();
 
     public VisualizeList findItem(String[] searchStrings);
-
-
 }

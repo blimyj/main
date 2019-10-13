@@ -107,15 +107,15 @@ public class ItemModelManager implements ItemModel {
      */
     private void addToSeparateList(Item item) {
         if (item.hasTask()) {
-            taskList.add(item);
+            taskList.add(taskList.size(), item);
         }
 
         if (item.hasEvent()) {
-            eventList.add(item);
+            eventList.add(eventList.size(), item);
         }
 
         if (item.hasReminder()) {
-            reminderList.add(item);
+            reminderList.add(reminderList.size(), item);
         }
     }
 
@@ -156,6 +156,19 @@ public class ItemModelManager implements ItemModel {
     public VisualizeList getVisualList() {
         return this.visualList;
     }
+
+    public VisualizeList getTaskList() {
+        return this.taskList;
+    }
+
+    public VisualizeList getEventList() {
+        return this.eventList;
+    }
+
+    public VisualizeList getReminderList() {
+        return this.reminderList;
+    }
+
 
     /**
      * Set a new item list to be the visualization list.

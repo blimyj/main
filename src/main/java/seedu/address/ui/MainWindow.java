@@ -74,13 +74,13 @@ public class MainWindow extends UiPart<Stage> {
      */
     void fillInnerParts() {
 
-        taskListPanel = new TaskListPanel(logic.getVisualList());
+        taskListPanel = new TaskListPanel(logic.getTaskList());
         taskListPanelPlaceholder.getChildren().add(taskListPanel.getRoot());
 
-        eventListPanel = new EventListPanel(logic.getVisualList());
+        eventListPanel = new EventListPanel(logic.getEventList());
         eventListPanelPlaceholder.getChildren().add(eventListPanel.getRoot());
 
-        reminderListPanel = new ReminderListPanel(logic.getVisualList());
+        reminderListPanel = new ReminderListPanel(logic.getReminderList());
         reminderListPanelPlaceholder.getChildren().add(reminderListPanel.getRoot());
 
         resultDisplay = new ResultDisplay();
@@ -88,7 +88,6 @@ public class MainWindow extends UiPart<Stage> {
 
         CommandBox commandBox = new CommandBox(this::executeCommand);
         commandBoxPlaceholder.getChildren().add(commandBox.getRoot());
-
 
     }
 
@@ -175,15 +174,6 @@ public class MainWindow extends UiPart<Stage> {
             if (commandResult.isSwitchViews()) {
                 handleSwitchView(commandResult.getTargetView().trim());
             }
-
-            taskListPanel = new TaskListPanel(logic.getVisualList());
-            taskListPanelPlaceholder.getChildren().add(taskListPanel.getRoot());
-
-            eventListPanel = new EventListPanel(logic.getVisualList());
-            eventListPanelPlaceholder.getChildren().add(eventListPanel.getRoot());
-
-            reminderListPanel = new ReminderListPanel(logic.getVisualList());
-            reminderListPanelPlaceholder.getChildren().add(reminderListPanel.getRoot());
 
             return commandResult;
         } catch (CommandException | ParseException e) {

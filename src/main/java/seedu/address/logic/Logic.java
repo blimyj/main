@@ -2,7 +2,9 @@ package seedu.address.logic;
 
 import java.nio.file.Path;
 
+import javafx.collections.ObservableList;
 import seedu.address.commons.core.GuiSettings;
+import seedu.address.commons.core.item.Item;
 import seedu.address.logic.commands.CommandResult;
 import seedu.address.logic.commands.exceptions.CommandException;
 import seedu.address.logic.parser.exceptions.ParseException;
@@ -51,4 +53,11 @@ public interface Logic {
 
     //ObservableList<Person> getFilteredPersonList();
     VisualizeList getVisualList();
+
+    VisualizeList getTaskList();
+
+    VisualizeList getEventList();
+
+    VisualizeList getReminderList();
+
 }
