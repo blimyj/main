@@ -273,7 +273,14 @@ public class ItemModelManager implements ItemModel {
         itemStorage.remove(item);
         taskList.removeItemFromList(item);
         eventList.removeItemFromList(item);
+        if (futureReminders.contains(item)) {
+            futureReminders.remove(item);
+        }
+        if (activeReminders.contains(item)) {
+            activeReminders.remove(item);
+        }
         reminderList.removeItemFromList(item);
+
         if (priorityMode) {
             getNextTask();
         }
